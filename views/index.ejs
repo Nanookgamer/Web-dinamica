@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+    <form action="/nuevo" method="POST">
+        <input type="text" name="nombre" placeholder="escriba un nombre">
+        <input type="submit" value="Añadir">
+    </form>
+    <ul>
+        <% if(personas.length > 0){ %>
+            <% for(let i = 0; i < personas.length; i++) { %>
+                <li><%= personas[i] %><a href="/borrar?nombre=<%= personas[i] %>">Borrar</a></li>
+            <% } %>
+        <% }else { %>
+            <li>No hay personas registradas</li>
+        <% } %>
+    </ul>
+    <p><%= mensaje %></p>
+    <p><%- mensaje %></p>
+</body>
+</html>
