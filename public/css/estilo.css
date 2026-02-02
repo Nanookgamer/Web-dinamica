@@ -1,5 +1,7 @@
 body {
     font-family: monospace;
+    background-color: aqua;
+    color: whitesmoke;
 }
 form {
     padding: 20px;
